@@ -1,0 +1,25 @@
+﻿-- Create new DB
+CREATE DATABASE TaskManagement;
+
+-- Use/Select newly created DB
+USE TaskManagement;
+GO
+
+--drop table TaskItem
+
+-- Create TaskItem Table
+CREATE TABLE TaskItem
+(
+    Id INT IDENTITY(1,1) NOT NULL,
+    Title NVARCHAR(50) NOT NULL,
+    Description NVARCHAR(100) NULL,
+    Status NVARCHAR(50) NOT NULL,
+    Priority NVARCHAR(50) NOT NULL,
+    CreatedAt DATETIME2 NOT NULL,
+    UpdateAt DATETIME2 NULL,
+);
+
+-- Create Primary Key separately with a custom name
+ALTER TABLE TaskItem
+ADD CONSTRAINT PK_TaskItem_Id PRIMARY KEY (Id);
+GO

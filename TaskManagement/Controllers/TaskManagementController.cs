@@ -93,8 +93,6 @@ namespace TaskManagement.Controllers
             {
                 return BadRequest(ex.Message);
             }
-        }
-
-        
+        }        
     }
 }
